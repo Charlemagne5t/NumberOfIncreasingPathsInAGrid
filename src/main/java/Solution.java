@@ -39,19 +39,5 @@ public class Solution {
         memo[i][j] = result + 1;
         return result + 1;
     }
+
 }
-/*# Intuition
-<!-- Describe your first thoughts on how to solve this problem. -->
-We need to find all paths from each cell and then sum them all up.
-# Approach
-<!-- Describe your approach to solving the problem. -->
-DFS for finding paths. We should use memoization to reduce complexity.
-
-# Complexity
-- Time complexity:
-- O(n)
-<!-- Add your time complexity here, e.g. $$O(n)$$ -->
-
-- Space complexity:
-- O(n)
-<!-- Add your space complexity here, e.g. $$O(n)$$ -->*/
