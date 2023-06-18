@@ -5,11 +5,9 @@ public class Solution {
         int n = grid[0].length;
         Integer[][] memo = new Integer[m][n];
         int answer = 0;
-        int[][] numberOfPathsFromEachCell = new int[m][n];
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
-                numberOfPathsFromEachCell[i][j] = dfs(grid, i, j, memo) % modulo;
-                answer = (answer + numberOfPathsFromEachCell[i][j]) % modulo;
+                answer = (answer + dfs(grid, i, j, memo) % modulo) % modulo;
             }
         }
 
@@ -42,3 +40,18 @@ public class Solution {
         return result + 1;
     }
 }
+/*# Intuition
+<!-- Describe your first thoughts on how to solve this problem. -->
+We need to find all paths from each cell and then sum them all up.
+# Approach
+<!-- Describe your approach to solving the problem. -->
+DFS for finding paths. We should use memoization to reduce complexity.
+
+# Complexity
+- Time complexity:
+- O(n)
+<!-- Add your time complexity here, e.g. $$O(n)$$ -->
+
+- Space complexity:
+- O(n)
+<!-- Add your space complexity here, e.g. $$O(n)$$ -->*/
